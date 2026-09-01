@@ -1,0 +1,24 @@
+From 749636329c3db731f42027a5c6a997bf8bba0e49 Mon Sep 17 00:00:00 2001
+From: Finn Hering <finn@hering.sh>
+Date: Tue, 1 Sep 2026 12:52:20 +0200
+Subject: [PATCH] only build scull and modules
+
+---
+ Makefile | 6 ++----
+ 1 file changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 7b08c49..130c651 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,8 +1,6 @@
+ 
+-SUBDIRS =  misc-progs misc-modules \
+-           skull scull scullc scullp lddbus sculld scullv shortprint simple tty \
+-	   pci usb\
+-	   sbull snull short
++SUBDIRS =  misc-modules \
++           scull 
+ 
+ all: subdirs
+ 
